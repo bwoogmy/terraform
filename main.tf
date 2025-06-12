@@ -1,3 +1,10 @@
+terraform {
+  backend "gcs" {
+    bucket = "tfstate-week7-462519"
+    prefix = "terraform/state"
+  }
+}
+
 provider "google" {
   project = var.GOOGLE_PROJECT
   region  = var.GOOGLE_REGION
